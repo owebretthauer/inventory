@@ -1,0 +1,120 @@
+---
+color_theme: "default"
+
+i3_desktop_env:
+  background: "~/.config/wall.jpg"
+
+i3_packages_extra:
+  - ranger
+  - mc
+
+i3_keybindings_extra:
+  - keybinding:
+    name: Volume (-2%)
+    key: $mod+F10
+    exec: --no-startup-id amixer sset Master 2%-
+  - keybinding:
+    name: Volume (-5%)
+    key: $mod+Shift+F10
+    exec: --no-startup-id amixer sset Master 5%-
+  - keybinding:
+    name: Volume (+2%)
+    key: $mod+F11
+    exec: --no-startup-id amixer sset Master 2%+
+  - keybinding:
+    name: Volume (+5%)
+    key: $mod+Shift+F11
+    exec: --no-startup-id amixer sset Master 5%+
+  - keybinding:
+    name: Volume (mute/unmute)
+    key: $mod+F12
+    exec: --no-startup-id amixer sset Master toggle
+  - keybinding:
+    name: Volue (default)
+    key: $mod+Shift+F12
+    exec: --no-startup-id amixer sset Master 40%
+
+i3_applications:
+  - application:
+    class: "Firefox"
+    name: "firefox"
+    workspace: 1
+    on_startup: false
+  - application:
+    class: "Google-chrome"
+    name: "chrome"
+    workspace: 2
+    on_startup: false
+  - application:
+    class: "Code"
+    name: "code"
+    workspace: 7
+    on_startup: false
+  - application:
+    class: "jetbrains-idea"
+    name: "idea"
+    workspace: 8
+    on_startup: false
+  - application:
+    class: "keepassxc"
+    name: "keepassxc"
+    workspace: 9
+    on_startup: false
+
+golang_repos:
+  -
+    url: https://github.com/tomnomnom/meg.git
+    dest: "{{ go_src_path}}/meg"
+  -
+    url: https://github.com/tomnomnom/httprobe.git
+    dest: "{{ go_src_path}}/httprobe"
+  -
+    url: https://github.com/tomnomnom/assetfinder.git
+    dest: "{{ go_src_path}}/assetfinder"
+  -
+    url: https://github.com/tomnomnom/unfurl.git
+    dest: "{{ go_src_path}}/unfurl"
+  -
+    url: https://github.com/tomnomnom/gf.git
+    dest: "{{ go_src_path}}/gf"
+  -
+    url: https://github.com/OJ/gobuster.git
+    dest: "{{ go_src_path}}/gobuster"
+
+plain_repos:
+  -
+    url: https://github.com/danielmiessler/SecLists.git
+    dest: "{{ plain_repos_src_path }}/SecLists"
+  -
+    url: https://github.com/DominicBreuker/pspy.git
+    dest: "{{ plain_repos_src_path }}/pspy/"
+  -
+    url: https://github.com/swisskyrepo/PayloadsAllTheThings.git
+    dest: "{{ plain_repos_src_path }}/PayloadsAllTheThings"
+  -
+    url: https://github.com/7ioSecurity/XSS-Payloads.git
+    dest: "{{ plain_repos_src_path }}/XSS-Payloads"
+  -
+    url: https://github.com/h0nus/QRGen
+    dest: "{{ plain_repos_src_path }}/QRGen"
+  -
+    url: https://github.com/GTFOBins/GTFOBins.github.io.git
+    dest: "{{ plain_repos_src_path }}/gtfobins"
+  -
+    url: https://github.com/LOLBAS-Project/LOLBAS.git
+    dest: "{{ plain_repos_src_path }}/lolbas"
+  -
+    url: https://github.com/thelinuxchoice/blackeye.git
+    dest: "{{ plain_repos_src_path }}/blackeye"
+  -
+    url: https://github.com/rebootuser/LinEnum.git
+    dest: "{{ plain_repos_src_path }}/LinEnum"
+  -
+    url: https://github.com/InteliSecureLabs/Linux_Exploit_Suggester.git
+    dest: "{{ plain_repos_src_path }}/Linux_Exploit_Suggester"
+  -
+    url: https://github.com/fuzzdb-project/fuzzdb.git
+    dest: "{{ plain_repos_src_path }}/fuzzdb"
+  -
+    url: https://github.com/offensive-security/exploitdb.git
+    dest: "{{ plain_repos_src_path }}/exploitdb"

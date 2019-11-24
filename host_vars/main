@@ -1,0 +1,16 @@
+---
+i3_monitors:
+  - monitor:
+    id: 1
+    output: "HDMI-0"
+    mode: "1920x1080"
+    pos: "0x0"
+    rotate: "normal"
+    workspaces: [1,2,3,4,5]
+  - monitor:
+    id: 2
+    output: "HDMI-1"
+    mode: "1920x1080"
+    pos: "1920x0"
+    rotate: "normal"
+    workspaces: [6,7,8,9,0]

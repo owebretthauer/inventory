@@ -1,0 +1,2 @@
+[desktop]
+main ansible_user=owe ansible_connection=local
